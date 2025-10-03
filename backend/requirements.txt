@@ -1,0 +1,10 @@
+
+fastapi==0.100.0
+uvicorn==0.22.0
+joblib==1.3.2
+ # scikit-learn is optional. If you have a real model saved as joblib (trained with scikit-learn),
+ # place it at backend/models/taxi_gb_model.joblib and the server will load it. Installing
+ # scikit-learn on some Python versions (e.g. 3.13) may attempt to compile from source; if
+ # you want to use a trained model, install a Python version with compatible wheels (e.g. 3.10/3.11)
+# Allow pip to pick a numpy wheel compatible with the local Python version
+ numpy>=1.24,<1.27
